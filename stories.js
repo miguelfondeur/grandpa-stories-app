@@ -223,7 +223,7 @@ export const stories = [
         svg_variant: "1",
     },
     {
-        title: "Grandpas Special Whistle",
+        title: "Grandpa's Special Whistle",
         content: [
             ["Grandpa had a very special way of whistling."],
             ["Because Grandpa was a singer, he knew how to sing with his full voice, or as he would say, 'I sing from my diaphragm.'"],
@@ -243,19 +243,50 @@ export const stories = [
         svg_variant: "1",
     },
     {
-        title: "Grandpas Flies a Plain",
+        title: "Grandpa Flies a Plain",
         content: [
-            ["Coming Soon"]
+            ["Grandpa loved planes."],
+            ["He liked them so much that he would go to a small airport to take practice flights."],
+            ["Whenever Grandpa did a practice flight, he had a flight instructor with him to keep things safe."],
+            ["But Grandpa knew a lot about planes, so he didn’t need much help."],
+            ["He loved flying so much that he would sometimes take other people to sit in the back seat with him!"],
+            ["One time, he even took Titi Monica to fly on her birthday!"],
+            ["One day, he asked Daddy if he wanted to go flying with him."],
+            ["Daddy is a little scared of heights, but he trusted Grandpa."],
+            ["So they went to a small airport called Perry Airport, met with the flight instructor, and got into a little plane called a Cessna."],
+            ["Everything was going fine. In a small plane, you can feel everything."],
+            ["Then Grandpa told the flight instructor, 'I want to go this way...'", "And he took the plane over a large body of water."],
+            ["This made Daddy a little bit nervous, but the water looked nice."],
+            ["I just told Grandpa, 'That’s a lot of water!'"],
+            ["Then, as they were getting close to land again, there was a big crane right in front of the plane!"],
+            ["Grandpa asked the flight instructor, 'Can we do a touch and go?'"],
+            ["Daddy had no idea what he was talking about."],
+            ["But the flight instructor said, 'Sure!'"],
+            ["And just like that, they flew under the crane, touched the ground for just a second, then took off again!"],
+            ["It was very exciting—and a little scary."],
+            ["Grandpa wasn’t nervous at all."],
+            ["Daddy was very proud of him... but he would rather stay on the ground!"]
         ],
-        bg_color: "#01b4c9",
+        bg_color: "#d8ba66",
         svg_variant: "1",
     },
     {
-        title: "Walk This Way",
+        title: "Walk This Way!",
         content: [
-            ["Coming Soon"]
-        ],
-        bg_color: "#01b4c9",
+            ["Grandpa loved doing silly things."],
+            ["Sometimes, when we were in a store or in front of a lot of people, Grandpa would tell us to 'Walk this way!'"],
+            ["Now, we knew that it was just another way of saying 'Follow me!'"],
+            ["But to Grandpa, it was the perfect excuse to be silly!"],
+            ["When Grandpa said 'Walk this way!' he would stretch out his legs from side to side as he walked and make a silly face!"],
+            ["It was so embarrassing because everyone would look at him, but it was also really funny!"],
+            ["We never copied him, but we always laughed."],
+            ["Sometimes, when Grandpa got out of the shower or put on his pajamas, he would pull his pants way up over his belly!"],
+            ["And then he would do his funny walk around the house, pretending like everything was normal."],
+            ["It made us laugh so much!"],
+            ["Can you pull your pants over your belly and do a funny walk like Grandpa?"],
+            ["Don't forget to say, 'Walk this way!'"]
+        ],        
+        bg_color: "#9d87f5",
         svg_variant: "1",
     },
     {
@@ -263,7 +294,7 @@ export const stories = [
         content: [
             ["Coming Soon"]
         ],
-        bg_color: "#01b4c9",
+        bg_color: "#6bb4fd",
         svg_variant: "1",
     },
     {
@@ -271,7 +302,7 @@ export const stories = [
         content: [
             ["Coming Soon"]
         ],
-        bg_color: "#01b4c9",
+        bg_color: "#8053fa",
         svg_variant: "1",
     },
     {
@@ -287,7 +318,7 @@ export const stories = [
         content: [
             ["Coming Soon"]
         ],
-        bg_color: "#01b4c9",
+        bg_color: "#ef6c01",
         svg_variant: "1",
     },
     {
@@ -295,7 +326,7 @@ export const stories = [
         content: [
             ["Coming Soon"]
         ],
-        bg_color: "#01b4c9",
+        bg_color: "#d92626",
         svg_variant: "1",
     }
 ]

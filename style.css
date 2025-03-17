@@ -71,9 +71,11 @@ dialog {
     }
 
     #story-list {
-        margin: 24px 24px 0;
+        margin: 24px auto 48px;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        padding-inline: 24px;;
 
         button {
             padding: 24px;
@@ -95,12 +97,14 @@ main {
     display: flex;
     align-items: center;
     padding-inline: 16px;
+}
 
-    .container {
-        display: flex;
-        align-items: center;
-        width: 100%;
-    }
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 #next, #previous {
