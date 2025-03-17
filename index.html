@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandpa Stories</title>
+    <meta name="description" content="A collection of stories about a grandpa named Fred. Mostly made for my kids.">
+    <script type="module" src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <menu>
+        <button class="open-button" popovertarget="stories-popover">Stories</button>
+    </menu>
+    <main>
+        <div class="container">
+            <button id="previous">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+            </button>
+            <!-- Dynamic Content -->
+            <section id="app">
+
+            </section>
+            <button id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+            </button>
+        </div>
+    </main>
+    <dialog id="stories-popover" popover>
+        <menu>
+            <h1>Stories</h1>
+            <button class="close-button" popovertarget="stories-popover" popovertargetaction="hide">Close</button>
+        </menu>
+        <div id="story-list">
+
+        </div>
+    </dialog>
+</body>
+</html>

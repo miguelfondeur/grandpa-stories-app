@@ -1,0 +1,227 @@
+:root {
+    --active-color: #6bb4fd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+}
+
+body {
+    background-color: var(--active-color);
+    font-family: 'Arial Rounded MT Bold';
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("https://transparenttextures.com/patterns/ps-neutral.png");
+    transition: background-color .15s linear;
+}
+
+menu {
+    margin: 0;
+    display: flex;
+    height: 64px;
+    padding-inline: 16px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+    button.open-button,
+    button.close-button {
+        height: 44px;
+        border: 0;
+        border-radius: 24px;
+        padding-inline: 16px;
+        font-size: 16px;
+        font-family: 'Arial Rounded MT Bold';
+        border-bottom: 4px solid #ba2222;
+        background-color: #ff3333;
+        color: white;
+        text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
+        cursor: pointer;
+    }
+
+    h1 {
+        color: #587e9c;
+        text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
+    }
+
+    button.open-button {
+        margin-left: auto;
+    }
+}
+
+dialog {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background-image: url("https://transparenttextures.com/patterns/ps-neutral.png");
+    padding: 0;
+
+    menu {
+        padding: 24px;
+        background-color: white;
+        border-bottom: 3px solid #eee;
+    }
+
+    #story-list {
+        margin: 24px 24px 0;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            padding: 24px;
+            margin-bottom: 16px;
+            border-radius: 16px;
+            font-size: 24px;
+            background-color: white;
+            color: #587e9c;
+            border: 0;
+            border-bottom: 3px solid #ddd;
+            cursor: pointer;
+            font-family: 'Arial Rounded MT Bold';
+        }
+    }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-inline: 16px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+#next, #previous {
+    height: 44px;
+    width: 44px;
+    border-radius: 100%;
+    flex-shrink: 0;
+    border: 0;
+    border-bottom: 4px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--active-color);
+    cursor: pointer;
+    background-color: white;
+    z-index: 10;
+
+    &[disabled] {
+        opacity: .4;
+        pointer-events: none;
+    }
+}
+
+#app {
+    padding: 16px;
+    width: 100%;
+}
+
+.story-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .story-image {
+        height: 200px;
+        width: 200px;
+        border-radius: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: clip;
+        background-color: color-mix(in oklab, var(--active-color), 40% black);
+
+        /* Initial position off-screen at the bottom */
+        img {
+            width: 60%;
+            position: absolute;
+            bottom: -50px; /* Initial position off-screen at the bottom */
+            animation: slideInFromBottom .5s ease-out forwards;
+        }
+
+    }
+
+    h2.story-title {
+        font-size: 40px;
+        margin-block: 24px;
+        color: white;
+        text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
+    }
+
+    .story {
+        border-radius: 24px;
+        background-color: white;
+        height: 40vh; /* Adjust height as needed */
+        overflow-y: scroll; /* Enable horizontal scrolling */
+        color: gray;
+        line-height: 1.5;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        scroll-snap-type: y mandatory; 
+        border: 2px solid color-mix(in oklab, var(--active-color), 10% black);
+    
+        .page {
+            width: 100%; /* Make each page take full width minus padding */
+            height: 100%; /* Ensure pages take the full height of the wrapper */
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 24px; /* Add padding to left and right */
+            align-items: center; /* Center content vertically within each page */
+            flex-shrink: 0; /* Prevent pages from shrinking */
+            scroll-snap-align: start;
+            position: relative;
+            counter-increment: page-number; 
+
+            &::after {
+                content: "Page " counter(page-number);
+                position: absolute;
+                bottom: 10px;
+                right: 16px;
+                font-size: 14px;
+                color: gray;
+                opacity: 0.7;
+            }
+        }
+    
+        p {
+            margin-top: 0;
+            font-size: 20px;
+        }
+    }
+
+}
+
+/* Slide-in animation from the bottom */
+@keyframes slideInFromBottom {
+    0% {
+        bottom: -50px; /* Start off-screen at the bottom */
+    }
+    100% {
+        bottom: 0; /* Final position */
+    }
+}
+
+/* Utilities  */
+
+.accent {
+    color:var(--active-color);
+}
