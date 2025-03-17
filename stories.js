@@ -243,7 +243,7 @@ export const stories = [
         svg_variant: "1",
     },
     {
-        title: "Grandpa Flies a Plain",
+        title: "Grandpa Flies a Plane",
         content: [
             ["Grandpa loved planes."],
             ["He liked them so much that he would go to a small airport to take practice flights."],
@@ -292,7 +292,26 @@ export const stories = [
     {
         title: "Grandpa the Food Tester",
         content: [
-            ["Coming Soon"]
+            ["Grandpa loved to try different foods."],
+            ["It didn’t matter if they tasted good or bad—he would try them!"],
+            ["Sometimes, he ate strange things that smelled weird and nobody else liked!"],
+            ["He would make sardine salads."],
+            ["He would put orange peels in his coffee (which was actually pretty tasty)."],
+            ["He would buy food from all kinds of restaurants and bring it home in a soggy bag."],
+            ["Grandpa was very adventurous!"],
+            ["Sometimes, Grandma would clean out the fridge and find something that looked or smelled a little bit old."],
+            ["Even if the packaging said it was still good, she needed someone to test it…"],
+            ["Grandpa to the rescue!"],
+            ["He would try everything in the fridge and tell Grandma if it was good or bad."],
+            ["'Can you check this cottage cheese?'"],
+            ["'…It’s good!'"],
+            ["'Can you try this milk?'"],
+            ["'Oh no, that’s bad.'"],
+            ["'Can you try this ham?'"],
+            ["'It’s good!... Wait… no, it’s bad.'"],
+            ["But Grandpa had a really strong stomach, so he never got sick!"],
+            ["Maybe he liked so many weird foods because he tested so much old food from the freezer?"],
+            ["'…It’s good!'"]
         ],
         bg_color: "#6bb4fd",
         svg_variant: "1",
