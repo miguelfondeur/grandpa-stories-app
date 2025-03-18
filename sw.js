@@ -1,18 +1,18 @@
 const CACHE_NAME = "grandpa-stories-cache-v1.1";  // Increment version to force update
 const ASSETS_TO_CACHE = [
-    "/",  
+    "/",
     "/index.html",
-    "/style.css?v=1.1",     
-    "/app.js?v=1.1",        
-    "/stories.js?v=1.1",    
-    "/manifest.json?v=1.1", 
+    "/style.css?v=1.1",
+    "/app.js?v=1.1",
+    "/stories.js?v=1.1",
+    "/manifest.json?v=1.1",
     "/icons/android-icon-192x192.png",
     "/icons/android-icon-144x144.png",
     "/icons/android-icon-96x96.png",
     "/icons/android-icon-72x72.png",
     "/icons/android-icon-48x48.png",
     "/icons/android-icon-36x36.png"
-];
+  ];
 
 // ✅ Install Event: Cache assets
 self.addEventListener("install", (event) => {

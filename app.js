@@ -1,24 +1,24 @@
 'use strict';
 
-//Imports
+// Imports
 import { stories } from "./stories.js";
 
-//Elements
+// Elements
 const app = document.querySelector('#app');
 const nextButton = document.querySelector('#next');
 const previousButton = document.querySelector('#previous');
 
-//Service Worker
+// Service Worker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then(reg => console.log("Service Worker registered!", reg))
       .catch(err => console.log("Service Worker registration failed!", err));
 }
-  
-//State
+
+// State
 let currentStory = 0;
 
-//functions
+// Functions
 function renderStory(story) {
     previousButton.disabled = currentStory === 0;
     nextButton.disabled = currentStory === stories.length - 1;
@@ -38,21 +38,21 @@ function renderStory(story) {
             </div>
             <h2 class="story-title">${ story.title }</h2>
             <div class="story">${ storyContent }</div>
-        </div>`
-};
+        </div>`;
+}
 
 function renderStoryList() {
     document.querySelector('#story-list').innerHTML = stories.map((story, index) => 
         `<button 
             data-story="${ index }" 
             popovertarget="stories-popover" 
-            popovertargetaction="hide">
+            popovertargetaction="hide"
+            aria-label="Read story: ${story.title}">
             ${ story.title }
         </button>`
     ).join('');
 }
 
-//Event Listeners
 document.addEventListener('click', event => {
     const nextButton = event.target.closest('#next');
     const previousButton = event.target.closest('#previous');
@@ -72,41 +72,29 @@ document.addEventListener('click', event => {
         currentStory = Number(storyButton.dataset.story);
         renderStory(stories[currentStory]);
     }
-})
 
+    // Disable buttons after rendering
+    previousButton.disabled = currentStory === 0;
+    nextButton.disabled = currentStory === stories.length - 1;
+});
+
+// Splash Screen
 function loadSplashScreen() {
     const splashScreen = document.querySelector("#splash-screen");
-
-    // Simulate loading time
-    const splash = document.querySelector("#splash-screen");
-
     window.addEventListener("load", () => {
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js').then(() => {
-                caches.open("grandpa-stories-cache-v1.1").then((cache) => {
-                    return cache.addAll([
-                        "/",
-                        "/index.html",
-                        "/style.css",
-                        "/app.js",
-                        "/stories.js"
-                    ]).then(() => {
-                        setTimeout(() => {
-                            splash.style.opacity = "0";
-                            setTimeout(() => splash.remove(), 750);
-                        }, 1000);
-                    });
-                });
-            });
-        }
+        setTimeout(() => {
+            splashScreen.style.opacity = "0";
+            setTimeout(() => splashScreen.remove(), 750);
+        }, 1000);
     });
 }
 
-
-//Render App
-loadSplashScreen()
+// Render App
+loadSplashScreen();
 
 // Load First Story
-renderStory(stories[currentStory]);
+if (stories.length > 0) {
+    renderStory(stories[currentStory]);
+}
 
 renderStoryList();
