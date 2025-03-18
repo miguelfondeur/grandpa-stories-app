@@ -18,6 +18,7 @@ const ASSETS_TO_CACHE = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
+      console.log("Caching assets:", ASSETS_TO_CACHE);  // Log cached files
       return cache.addAll(ASSETS_TO_CACHE);
     })
     .then(() => self.skipWaiting())  // Activate new service worker immediately
@@ -35,23 +36,23 @@ self.addEventListener("activate", (event) => {
       );
     }).then(() => self.clients.claim())  // Take control of all clients immediately
   );
-  
+
   // Reload all open pages with the new cache
   self.clients.matchAll().then((clients) => {
     clients.forEach((client) => client.navigate(client.url));
   });
 });
 
-// ✅ Fetch Event: Serve from cache or fetch new content
+// ✅ Fetch Event: Always fetch fresh content first, cache as backup
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request).then((response) => {
+    fetch(event.request)   // Always fetch fresh content first
+      .then((response) => {
         return caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, response.clone());
+          cache.put(event.request, response.clone());  // Update cache with fresh content
           return response;
         });
-      });
-    })
+      })
+      .catch(() => caches.match(event.request))  // Use cache only as a fallback
   );
 });
