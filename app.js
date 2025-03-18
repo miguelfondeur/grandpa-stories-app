@@ -66,6 +66,7 @@ document.addEventListener('click', event => {
     const nextButton = event.target.closest('#next');
     const previousButton = event.target.closest('#previous');
     const storyButton = event.target.closest('button[data-story]');
+    const storyImage = event.target.closest('.story-image');
 
     if(nextButton) {
         currentStory++;
@@ -80,6 +81,10 @@ document.addEventListener('click', event => {
     if(storyButton) {
         currentStory = Number(storyButton.dataset.story);
         renderStory(stories[currentStory]);
+    }
+
+    if(storyImage) {
+        storyImage.classList.toggle('active');
     }
 });
 

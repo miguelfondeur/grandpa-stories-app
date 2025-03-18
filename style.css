@@ -208,19 +208,19 @@ main {
     left: -10px;
 }
 
-.story-image:hover img, 
-.story-image:focus-visible img {
+.story-image.active img, 
+.story-image.active img {
     visibility: hidden;
 }
 
-.story-image:hover .active-image, 
-.story-image:focus-visible .active-image {
+.story-image.active .active-image, 
+.story-image.active .active-image {
     visibility: visible;
     display: block;
 }
 
-.story-image:hover .action-text, 
-.story-image:focus-visible .action-text {
+.story-image.active .action-text, 
+.story-image.active .action-text {
     display: block;
 }
 
