@@ -46,6 +46,8 @@ button.close-button {
     color: white;
     text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
     cursor: pointer;
+    padding-block: 0;
+    margin-bottom: 0;
 }
 
 menu h1 {
