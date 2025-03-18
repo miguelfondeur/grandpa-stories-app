@@ -74,6 +74,38 @@ document.addEventListener('click', event => {
     }
 })
 
+function loadSplashScreen() {
+    const splashScreen = document.querySelector("#splash-screen");
+
+    // Simulate loading time
+    const splash = document.querySelector("#splash-screen");
+
+    window.addEventListener("load", () => {
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(() => {
+                caches.open("grandpa-stories-cache-v1.1").then((cache) => {
+                    return cache.addAll([
+                        "/",
+                        "/index.html",
+                        "/style.css",
+                        "/app.js",
+                        "/stories.js"
+                    ]).then(() => {
+                        setTimeout(() => {
+                            splash.style.opacity = "0";
+                            setTimeout(() => splash.remove(), 750);
+                        }, 1000);
+                    });
+                });
+            });
+        }
+    });
+}
+
+
+//Render App
+loadSplashScreen()
+
 // Load First Story
 renderStory(stories[currentStory]);
 
