@@ -31,30 +31,30 @@ menu {
     justify-content: space-between;
     position: sticky;
     top: 0;
+}
 
-    button.open-button,
-    button.close-button {
-        height: 44px;
-        border: 0;
-        border-radius: 24px;
-        padding-inline: 16px;
-        font-size: 16px;
-        font-family: 'Arial Rounded MT Bold';
-        border-bottom: 4px solid #ba2222;
-        background-color: #ff3333;
-        color: white;
-        text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
-        cursor: pointer;
-    }
+button.open-button,
+button.close-button {
+    height: 44px;
+    border: 0;
+    border-radius: 24px;
+    padding-inline: 16px;
+    font-size: 16px;
+    font-family: 'Arial Rounded MT Bold';
+    border-bottom: 4px solid #ba2222;
+    background-color: #ff3333;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
+    cursor: pointer;
+}
 
-    h1 {
-        color: #587e9c;
-        text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
-    }
+menu h1 {
+    color: #587e9c;
+    text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
+}
 
-    button.open-button {
-        margin-left: auto;
-    }
+menu button.open-button {
+    margin-left: auto;
 }
 
 dialog {
@@ -63,33 +63,33 @@ dialog {
     border: 0;
     background-image: url("https://transparenttextures.com/patterns/ps-neutral.png");
     padding: 0;
+}
 
-    menu {
-        padding: 24px;
-        background-color: white;
-        border-bottom: 3px solid #eee;
-    }
+dialog menu {
+    padding: 24px;
+    background-color: white;
+    border-bottom: 3px solid #eee;
+}
 
-    #story-list {
-        margin: 24px auto 48px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-inline: 24px;;
+dialog #story-list {
+    margin: 24px auto 48px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 24px;;
+}
 
-        button {
-            padding: 24px;
-            margin-bottom: 16px;
-            border-radius: 16px;
-            font-size: 24px;
-            background-color: white;
-            color: #587e9c;
-            border: 0;
-            border-bottom: 3px solid #ddd;
-            cursor: pointer;
-            font-family: 'Arial Rounded MT Bold';
-        }
-    }
+dialog button {
+    padding: 24px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    font-size: 24px;
+    background-color: white;
+    color: #587e9c;
+    border: 0;
+    border-bottom: 3px solid #ddd;
+    cursor: pointer;
+    font-family: 'Arial Rounded MT Bold';
 }
 
 main {
@@ -121,11 +121,12 @@ main {
     cursor: pointer;
     background-color: white;
     z-index: 10;
+}
 
-    &[disabled] {
-        opacity: .4;
-        pointer-events: none;
-    }
+#next[disabled],
+#previous[disabled] {
+    opacity: .4;
+    pointer-events: none;
 }
 
 #app {
@@ -138,80 +139,78 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
-    .story-image {
-        height: 200px;
-        width: 200px;
-        border-radius: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: clip;
-        background-color: color-mix(in oklab, var(--active-color), 40% black);
+.story-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: clip;
+    background-color: color-mix(in oklab, var(--active-color), 40% black);
+}
 
-        /* Initial position off-screen at the bottom */
-        img {
-            width: 60%;
-            position: absolute;
-            bottom: -50px; /* Initial position off-screen at the bottom */
-            animation: slideInFromBottom .5s ease-out forwards;
-        }
+/* Initial position off-screen at the bottom */
+.story-image img {
+    width: 60%;
+    position: absolute;
+    bottom: -50px; /* Initial position off-screen at the bottom */
+    animation: slideInFromBottom .5s ease-out forwards;
+}
 
-    }
+h2.story-title {
+    font-size: 40px;
+    margin-block: 24px;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
+}
 
-    h2.story-title {
-        font-size: 40px;
-        margin-block: 24px;
-        color: white;
-        text-shadow: rgba(0, 0, 0, 0.133) 0px 2px 0px;
-    }
-
-    .story {
-        border-radius: 24px;
-        background-color: white;
-        height: 40vh; /* Adjust height as needed */
-        overflow-y: scroll; /* Enable horizontal scrolling */
-        color: gray;
-        line-height: 1.5;
-        width: 100%;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        scroll-snap-type: y mandatory; 
-        border: 2px solid color-mix(in oklab, var(--active-color), 10% black);
+.story-wrapper .story {
+    border-radius: 24px;
+    background-color: white;
+    height: 40vh; /* Adjust height as needed */
+    overflow-y: scroll; /* Enable horizontal scrolling */
+    color: gray;
+    line-height: 1.5;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    scroll-snap-type: y mandatory; 
+    border: 2px solid color-mix(in oklab, var(--active-color), 10% black);
+}
     
-        .page {
-            width: 100%; /* Make each page take full width minus padding */
-            height: 100%; /* Ensure pages take the full height of the wrapper */
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 24px; /* Add padding to left and right */
-            align-items: center; /* Center content vertically within each page */
-            flex-shrink: 0; /* Prevent pages from shrinking */
-            scroll-snap-align: start;
-            position: relative;
-            counter-increment: page-number; 
+.page {
+    width: 100%; /* Make each page take full width minus padding */
+    height: 100%; /* Ensure pages take the full height of the wrapper */
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px; /* Add padding to left and right */
+    align-items: center; /* Center content vertically within each page */
+    flex-shrink: 0; /* Prevent pages from shrinking */
+    scroll-snap-align: start;
+    position: relative;
+    counter-increment: page-number; 
+}
 
-            &::after {
-                content: "Page " counter(page-number);
-                position: absolute;
-                bottom: 10px;
-                right: 16px;
-                font-size: 14px;
-                color: gray;
-                opacity: 0.7;
-            }
-        }
+.page::after {
+    content: "Page " counter(page-number);
+    position: absolute;
+    bottom: 10px;
+    right: 16px;
+    font-size: 14px;
+    color: gray;
+    opacity: 0.7;
+}
     
-        p {
-            margin-top: 0;
-            font-size: 20px;
-        }
-    }
-
+.page p {
+    margin-top: 0;
+    font-size: 20px;
 }
 
 /* Slide-in animation from the bottom */
