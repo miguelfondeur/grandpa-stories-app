@@ -4,8 +4,8 @@
     "description": "A collection of stories about a grandpa named Fred. Mostly made for my kids.",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
+    "background_color": "#1B69C1",
+    "theme_color": "#1B69C1",
     "icons": [
         {
             "src": "/icons/android-icon-36x36.png",
