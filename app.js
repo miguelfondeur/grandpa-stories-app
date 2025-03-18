@@ -20,8 +20,10 @@ let currentStory = 0;
 
 // Functions
 function renderStory(story) {
+    // Disable/enable buttons based on the current story
     previousButton.disabled = currentStory === 0;
     nextButton.disabled = currentStory === stories.length - 1;
+
     document.documentElement.style.setProperty('--active-color', story.bg_color);
 
     const storyContent = story.content.map(page => {
@@ -72,10 +74,6 @@ document.addEventListener('click', event => {
         currentStory = Number(storyButton.dataset.story);
         renderStory(stories[currentStory]);
     }
-
-    // Disable buttons after rendering
-    previousButton.disabled = currentStory === 0;
-    nextButton.disabled = currentStory === stories.length - 1;
 });
 
 // Splash Screen
