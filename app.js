@@ -8,6 +8,13 @@ const app = document.querySelector('#app');
 const nextButton = document.querySelector('#next');
 const previousButton = document.querySelector('#previous');
 
+//Service Worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log("Service Worker registered!", reg))
+      .catch(err => console.log("Service Worker registration failed!", err));
+}
+  
 //State
 let currentStory = 0;
 
@@ -23,7 +30,7 @@ function renderStory(story) {
         }).join('');
         return `<div class="page">${ pageHTML }</div>`;
     }).join('');
-    
+
     app.innerHTML = `
         <div class="story-wrapper">
             <div class="story-image">

@@ -229,3 +229,9 @@ main {
 .accent {
     color:var(--active-color);
 }
+
+@media all and (display-mode: standalone) {
+    body {
+      background: white; /* Optional: Prevents weird full-screen behavior */
+    }
+  }
