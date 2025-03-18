@@ -293,7 +293,7 @@ export const stories = [
         bg_color: "#01b4c9",
         svg_variant: "1",
         interaction: {
-            svg: "whisteling",
+            svg: "whistling",
             text: "WHEEE WHEEEEOOO!!"
         },
     },
@@ -479,7 +479,7 @@ export const stories = [
         },
     },
     {
-        title: "Grandpas Treasures",
+        title: "Grandpa's Treasures",
         author: "Daddy",
         content: [
             ["Grandpa did so many things in his life, and he had so much cool stuff!"],
