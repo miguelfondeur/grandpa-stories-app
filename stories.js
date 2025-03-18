@@ -511,5 +511,18 @@ export const stories = [
             svg: "1",
             text: "I have the best family."
         },
+    },
+    {
+        title: "Grandpa Burns Christmas Trees",
+        author: "Daddy",
+        content: [
+            ["Coming Soon!"]
+        ],
+        bg_color: "#f8709e",
+        svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "Woooooohhh!!"
+        },
     }
 ]

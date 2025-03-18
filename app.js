@@ -66,20 +66,36 @@ document.addEventListener('click', event => {
     const nextButton = event.target.closest('#next');
     const previousButton = event.target.closest('#previous');
     const storyButton = event.target.closest('button[data-story]');
+    const storyImage = event.target.closest('.story-image');
 
-    if(nextButton) {
+    if (nextButton) {
         currentStory++;
         renderStory(stories[currentStory]);
     }
 
-    if(previousButton) {
+    if (previousButton) {
         currentStory--;
         renderStory(stories[currentStory]);
     }
 
-    if(storyButton) {
+    if (storyButton) {
         currentStory = Number(storyButton.dataset.story);
         renderStory(stories[currentStory]);
+    }
+
+    if (storyImage) {
+        // Apply fixes for iOS flickering issues
+        requestAnimationFrame(() => {
+            storyImage.classList.toggle('active');
+
+            // Force reflow to prevent image flickering on iOS
+            storyImage.offsetHeight; 
+
+            // Add a stabilized class to ensure consistent rendering
+            requestAnimationFrame(() => {
+                storyImage.classList.add('stabilized');
+            });
+        });
     }
 });
 
