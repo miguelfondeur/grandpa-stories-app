@@ -231,6 +231,8 @@ h2.story-title {
 
 @media all and (display-mode: standalone) {
     body {
-      background: white; /* Optional: Prevents weird full-screen behavior */
+        background-color: var(--active-color);  /* Ensure color consistency */
+        background-image: url("https://transparenttextures.com/patterns/ps-neutral.png");
+        transition: background-color .15s linear;
     }
-  }
+}
