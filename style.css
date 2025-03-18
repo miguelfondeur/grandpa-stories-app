@@ -70,6 +70,7 @@ dialog menu {
     padding: 24px;
     background-color: white;
     border-bottom: 3px solid #eee;
+    z-index: 10;
 }
 
 dialog #story-list {
@@ -91,6 +92,17 @@ dialog button {
     border-bottom: 3px solid #ddd;
     cursor: pointer;
     font-family: 'Arial Rounded MT Bold';
+    position: relative;
+    overflow: clip;
+}
+
+dialog button .marker {
+    width: 10px;
+    height: 100%;
+    background-color: #ddd;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 main {
@@ -147,19 +159,81 @@ main {
     width: 200px;
     border-radius: 100%;
     position: relative;
+    background-color: color-mix(in oklab, var(--active-color), 40% black);
+    cursor: pointer;
+    border: 0;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+    border-radius: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: clip;
-    background-color: color-mix(in oklab, var(--active-color), 40% black);
+}
+
+.story-image:focus-within {
+   visibility: hidden;
+}
+
+.action-text,
+.active-image {
+    display: none;
+}
+
+.action-text {
+    position: absolute;
+    z-index: 20;
+    background-color: white;
+    color: gray;
+    padding: 12px;
+    width: fit-content;
+    top: 0;
+    border-radius: 40px;
+    left: calc(100% - 32px);
+    min-width: 135px;
+}
+
+.action-text:before {
+    content: "";
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+}
+
+.story-image:hover img, 
+.story-image:focus-visible img {
+    visibility: hidden;
+}
+
+.story-image:hover .active-image, 
+.story-image:focus-visible .active-image {
+    visibility: visible;
+    display: block;
+}
+
+.story-image:hover .action-text, 
+.story-image:focus-visible .action-text {
+    display: block;
 }
 
 /* Initial position off-screen at the bottom */
-.story-image img {
-    width: 60%;
+.image-wrapper .active-image {
     position: absolute;
-    bottom: -50px; /* Initial position off-screen at the bottom */
-    animation: slideInFromBottom .5s ease-out forwards;
+}
+
+.image-wrapper img {
+    position: absolute;
+    bottom: 0;
+    /* bottom: -50px; */
+    /* animation: slideInFromBottom .5s ease-out forwards; */
 }
 
 h2.story-title {

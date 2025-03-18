@@ -35,8 +35,14 @@ function renderStory(story) {
 
     app.innerHTML = `
         <div class="story-wrapper">
-            <div class="story-image">
-                <img src="/img/grandpa-${ story.svg_variant }.svg" title="Grandpa Cartoon">
+            <div class="story-image" tabindex="0">
+                <div class="image-wrapper">
+                    <img src="/img/grandpa-${ story.svg_variant }.svg" width="120" title="Grandpa Cartoon">
+                    <img class="active-image" width="120" src="/img/grandpa-${ story.interaction.svg }.svg" title="Grandpa Cartoon">
+                </div>
+                <div class="action-text">
+                    ${ story.interaction.text }
+                </div>
             </div>
             <h2 class="story-title">${ story.title }</h2>
             <div class="story">${ storyContent }</div>
@@ -46,10 +52,11 @@ function renderStory(story) {
 function renderStoryList() {
     document.querySelector('#story-list').innerHTML = stories.map((story, index) => 
         `<button 
-            data-story="${ index }" 
+            data-story="${ index }"
             popovertarget="stories-popover" 
             popovertargetaction="hide"
             aria-label="Read story: ${story.title}">
+            <span class="marker" style="background-color: ${ story.bg_color };"></span>
             ${ story.title }
         </button>`
     ).join('');

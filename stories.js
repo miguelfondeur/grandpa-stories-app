@@ -3,6 +3,7 @@
 export const stories = [
     {
         title: "Grandpa and the Banana Spider",
+        author: "Daddy",
         content: [
             ["One day, while the kids—Angie, Tony, and Nuby—were playing in the backyard of our house in Florida, they saw a big spider web. And right in the middle of it was a really big <span class='accent'>banana spider!</span>"],
             ["Banana spider webs are huge, and sometimes they're even yellow in color. They don’t bite people, but the kids were still scared."],
@@ -15,10 +16,15 @@ export const stories = [
             ["Grandpa was brave enough to capture the spider, but when he didn’t see him, he was just as scared as the kids!", "Daddy laughed and reassured him, \"Nothing on your back, Dad.\"", "And with that, they drove back home safely, leaving the banana spider in his new home."]
         ],
         bg_color: "#6bb4fd", 
-        svg_variant: "1"
+        svg_variant: "1",
+        interaction: {
+            svg: "scared",
+            text: "I Don't See it!!"
+        }
     },
     {
         title: "Grandpa Talks To Squirrels",
+        author: "Daddy",
         content: [
             ["One day, when Daddy, Titi Sofi, and Titi Lali were little, it was Grandpa's turn to take care of them while Grandma went out. He said, \"Let's go to the park!\""],
             ["They were always excited when Grandpa took them out because they never knew what crazy things were going to happen with him while Grandma was away. So Grandpa packed some yummy peanut butter and jelly sandwiches, and they went to C. B. Smith Park."],
@@ -28,10 +34,15 @@ export const stories = [
             ["It sure looked like it! We tried to call him down, but he just ignored us. I think only Grandpa had squirrel powers."]
         ],
         bg_color: "#8053fa", 
-        svg_variant: "1"
+        svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "Are you hungry?"
+        }
     },
     {
         title: "Grandpa Plays Zelda",
+        author: "Daddy",
         content: [
             ["When we were little kids, we had the first Nintendo game system. It was called the NES! Our video games came in big rectangles called cartridges."],
             ["We had a lot of fun, and we thought the NES was just for us kids. But one day, Grandpa found one of our game cartridges called <strong>The Legend of Zelda</strong>. It came in a special gold cartridge."],
@@ -47,10 +58,15 @@ export const stories = [
             ["The NES was made for kids, but Grandpa was the Zelda master."]
         ],
         bg_color: "#d92626", 
-        svg_variant: "1"
+        svg_variant: "1",
+        interaction: {
+            svg: "yelling",
+            text: "Put A Bomb There"
+        }
     },
     {
         title: "Grandpa Helps Santa",
+        author: "Daddy",
         content: [
             ["Grandpa helped a lot of people in a lot of different ways. One way he helped was through the Angel Tree program."],
             ["Every year, during Christmas time, Grandpa, Grandma, and all their friends from church would collect toys for little kids whose parents didn’t have enough, or kids who only had one mommy or daddy."],
@@ -65,9 +81,14 @@ export const stories = [
         ],
         bg_color: "#32a658",
         svg_variant: "santa",
+        interaction: {
+            svg: "santa-2",
+            text: "Ho ho ho!"
+        }
     }, 
     {
         title: "Grandpa's Car, Clunker",
+        author: "Daddy",
         content: [
             ["When Daddy was little, Grandpa had a car he called \"Clunker.\""],
             ["He called it Clunker because every time the car was on, it would go \"clunk clunk clunk clunk.\""],
@@ -89,9 +110,14 @@ export const stories = [
         ],
         bg_color: "#bf8f68",
         svg_variant: "1",
+        interaction: {
+            svg: "surprised",
+            text: "Jump In! I can't stop!"
+        },
     },
     {
         title: "Grandpa and the Giant Iguana",
+        author: "Daddy",
         content: [
             ["In Florida, where we used to live, there were a lot of iguanas."],
             ["We had them in our neighborhood, we would see them on the side of the road, they would climb trees, and we even had them in our backyard!"],
@@ -111,9 +137,14 @@ export const stories = [
         ],
         bg_color: "#ef6c01",
         svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "That's a BIG Iguana"
+        },
     },
     {
         title: "Grandpa's Pep Shake",
+        author: "Daddy",
         content: [
             ["When Grandpa was living in New York, he volunteered at a boys’ club."],
             ["He noticed that many of the boys would come in hungry, and when you're hungry, it's hard to do your best."],
@@ -138,9 +169,14 @@ export const stories = [
         ],        
         bg_color: "#2a57ad",
         svg_variant: "1",
+        interaction: {
+            svg: "1",
+            text: "Delicious!"
+        },
     },
     {
         title: "Grandpa at the Drive-Thru",
+        author: "Daddy",
         content: [
             ["Grandpa loved to act silly and do silly things."],
             ["Especially when we were ordering food at a drive-thru..."],
@@ -163,9 +199,14 @@ export const stories = [
         ],        
         bg_color: "#ffe14d",
         svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "My son thinks you're cute!"
+        },
     },
     {
         title: "Grandpa Helps a Little Girl",
+        author: "Daddy",
         content: [
             ["One day, Daddy and Grandpa were driving through a neighborhood in Florida."],
             ["We saw a brother and sister playing outside in the street."],
@@ -187,9 +228,14 @@ export const stories = [
         ],
         bg_color: "#f8709e",
         svg_variant: "1",
+        interaction: {
+            svg: "surprised",
+            text: "I have to help!"
+        },
     },
     {
         title: "Did You Know He Was a Genius?",
+        author: "Daddy",
         content: [
             ["Grandpa knew so many things."],
             ["He knew about planes, he knew about electricity, he knew about plumbing, he knew about cars, he knew about outer space..."],
@@ -221,9 +267,14 @@ export const stories = [
         ],
         bg_color: "#93dae4",
         svg_variant: "1",
+        interaction: {
+            svg: "confused",
+            text: "Did you know I was a Genius??"
+        },
     },
     {
         title: "Grandpa's Special Whistle",
+        author: "Daddy",
         content: [
             ["Grandpa had a very special way of whistling."],
             ["Because Grandpa was a singer, he knew how to sing with his full voice, or as he would say, 'I sing from my diaphragm.'"],
@@ -241,9 +292,14 @@ export const stories = [
         ],
         bg_color: "#01b4c9",
         svg_variant: "1",
+        interaction: {
+            svg: "whisteling",
+            text: "WHEEE WHEEEEOOO!!"
+        },
     },
     {
         title: "Grandpa Flies a Plane",
+        author: "Daddy",
         content: [
             ["Grandpa loved planes."],
             ["He liked them so much that he would go to a small airport to take practice flights."],
@@ -269,9 +325,14 @@ export const stories = [
         ],
         bg_color: "#d8ba66",
         svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "Let's do a touch and go!"
+        },
     },
     {
         title: "Walk This Way!",
+        author: "Daddy",
         content: [
             ["Grandpa loved doing silly things."],
             ["Sometimes, when we were in a store or in front of a lot of people, Grandpa would tell us to 'Walk this way!'"],
@@ -288,9 +349,14 @@ export const stories = [
         ],        
         bg_color: "#9d87f5",
         svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "Walk This Way!"
+        },
     },
     {
         title: "Grandpa the Food Tester",
+        author: "Daddy",
         content: [
             ["Grandpa loved to try different foods."],
             ["It didn’t matter if they tasted good or bad—he would try them!"],
@@ -315,9 +381,14 @@ export const stories = [
         ],
         bg_color: "#6bb4fd",
         svg_variant: "1",
+        interaction: {
+            svg: "scared",
+            text: "No... It's not good."
+        },
     },
     {
         title: "Grandpa Climbs a Scaffold",
+        author: "Daddy",
         content: [
             ["Sometimes, Grandpa would ask Daddy to help him with projects."],
             ["Daddy helped Grandpa connect projectors, speakers, and organize wires."],
@@ -347,9 +418,14 @@ export const stories = [
         ],
         bg_color: "#8053fa",
         svg_variant: "1",
+        interaction: {
+            svg: "1",
+            text: "I'll do it!"
+        },
     },
     {
         title: "Grandpa the Builder",
+        author: "Daddy",
         content: [
             ["Grandpa knew how to build anything. He was really smart."],
             ["He built things for the family and for his work."],
@@ -371,9 +447,14 @@ export const stories = [
         ],
         bg_color: "#ef6c01",
         svg_variant: "1",
+        interaction: {
+            svg: "1",
+            text: "I can build anything"
+        },
     },
     {
         title: "Grandpa the World Traveler",
+        author: "Daddy",
         content: [
             ["Grandpa went to so many countries for work."],
             ["Maybe it all started when he was little."],
@@ -392,9 +473,14 @@ export const stories = [
         ],
         bg_color: "#01b4c9",
         svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "Oh, I've been there!"
+        },
     },
     {
         title: "Grandpas Treasures",
+        author: "Daddy",
         content: [
             ["Grandpa did so many things in his life, and he had so much cool stuff!"],
             ["He was the first person I ever saw with a cell phone!"],
@@ -421,5 +507,9 @@ export const stories = [
         ],
         bg_color: "#d92626",
         svg_variant: "1",
+        interaction: {
+            svg: "1",
+            text: "I have the best family."
+        },
     }
 ]

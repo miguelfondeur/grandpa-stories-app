@@ -46,8 +46,8 @@
 <circle cx="78" cy="104" r="3" fill="white"/>
 <circle cx="154" cy="104" r="3" fill="white"/>
 <path d="M90 200C110.427 217.888 126.438 216.77 143 200H90Z" fill="white" stroke="black"/>
-<ellipse cx="96.0757" cy="186.953" rx="14.5" ry="22.8895" transform="rotate(73.4181 96.0757 186.953)" fill="#9F9E9E"/>
-<ellipse cx="135.099" cy="186.429" rx="14.5" ry="22.8895" transform="rotate(-73.42 135.099 186.429)" fill="#9F9E9E"/>
+<ellipse cx="99.0757" cy="186.953" rx="14.5" ry="22.8895" transform="rotate(73.4181 99.0757 186.953)" fill="#9F9E9E"/>
+<ellipse cx="138.099" cy="186.429" rx="14.5" ry="22.8895" transform="rotate(-73.42 138.099 186.429)" fill="#9F9E9E"/>
 <path d="M90.619 166.658C87.3983 157.835 97.4452 152.116 104.619 159.158" stroke="black"/>
 <path d="M147 165.658C150.221 156.835 140.174 151.116 133 158.158" stroke="black"/>
 </svg>
