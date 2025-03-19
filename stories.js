@@ -29,7 +29,7 @@ export const stories = [
             ["One day, when Daddy, Titi Sofi, and Titi Lali were little, it was Grandpa's turn to take care of them while Grandma went out. He said, \"Let's go to the park!\""],
             ["They were always excited when Grandpa took them out because they never knew what crazy things were going to happen with him while Grandma was away. So Grandpa packed some yummy peanut butter and jelly sandwiches, and they went to C. B. Smith Park."],
             ["After some time playing, we all decided to have our peanut butter and jelly sandwiches. When all of a sudden, a squirrel came down from a tree, to the closest tree branch he could find (without getting too close to us humans)."],
-            ["The squirrel looked at Grandpa and started pointing both of his little hands into his little squirrel chest. It looked like he was asking Grandpa, 'Can I have some?' And Grandpa said, 'Do you want some? Sure, you can have a piece.' And he took a bit of the sandwich and left it on the table."],
+            ["The squirrel looked at Grandpa and started pointing both of his little hands into his little squirrel chest. It looked like he was asking Grandpa, 'Can I have some?' And Grandpa said, 'Do you want some? Sure, you can have a piece.' So grandpa put a piece of sandwich in his hands, and the squirrel came down and took it out from his hands!"],
             ["Mr. Squirrel came down from the tree, grabbed it, then went right up to his branch to eat it. We couldn't believe it! Did Grandpa and the squirrel know how to talk to each other?"],
             ["It sure looked like it! We tried to call him down, but he just ignored us. I think only Grandpa had squirrel powers."]
         ],
@@ -519,6 +519,19 @@ export const stories = [
             ["Coming Soon!"]
         ],
         bg_color: "#f8709e",
+        svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "Woooooohhh!!"
+        },
+    },
+    {
+        title: "Slingshot Rifle Toys",
+        author: "Daddy",
+        content: [
+            ["Coming Soon!"]
+        ],
+        bg_color: "#6bb4fd",
         svg_variant: "1",
         interaction: {
             svg: "laughing",

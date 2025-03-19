@@ -53,7 +53,7 @@ button.close-button {
 
 button:hover {
     transform: scale(1.05);
-    background-color: #e62e2e;
+    background-color: #eee;
 }
 
 menu h1 {
@@ -206,6 +206,7 @@ main {
     /* Force GPU acceleration */
     will-change: transform, opacity;
     transform: translateZ(0);
+    user-select: none;
 }
 
 .story-image:focus-within {
@@ -230,6 +231,7 @@ main {
     left: calc(100% - 32px);
     min-width: 135px;
     transition: opacity 0.3s ease;
+    user-select: none;
 }
 
 .action-text:before {
@@ -243,18 +245,18 @@ main {
     left: -10px;
 }
 
-.story-image:hover img, 
+.story-image.active img, 
 .story-image:focus-visible img {
     visibility: hidden;
 }
 
-.story-image:hover .active-image, 
+.story-image.active .active-image, 
 .story-image:focus-visible .active-image {
     visibility: visible;
     display: block;
 }
 
-.story-image:hover .action-text, 
+.story-image.active .action-text, 
 .story-image:focus-visible .action-text {
     display: block;
     opacity: 1;
@@ -264,12 +266,14 @@ main {
 .image-wrapper .active-image {
     position: absolute;
     transition: opacity 0.3s ease;
+    user-select: none;
 }
 
 .image-wrapper img {
     position: absolute;
     bottom: 0;
     transition: bottom 0.5s ease;
+    user-select: none;
 }
 
 h2.story-title {
