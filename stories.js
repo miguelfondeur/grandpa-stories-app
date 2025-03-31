@@ -537,5 +537,18 @@ export const stories = [
             svg: "laughing",
             text: "Woooooohhh!!"
         },
+    },
+    {
+        title: "En La Vida...",
+        author: "Daddy",
+        content: [
+            ["Story about the song 'Inolvidable'. Coming Soon!"]
+        ],
+        bg_color: "#6bb4fd",
+        svg_variant: "1",
+        interaction: {
+            svg: "laughing",
+            text: "En la vida hay amores, que nunca... pueden olvidarse."
+        },
     }
 ]
